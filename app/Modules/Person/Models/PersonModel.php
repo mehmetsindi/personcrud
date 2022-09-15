@@ -22,6 +22,7 @@ class PersonModel extends Model
     public function fillFields()
     {
         return [
+            'name' => null,
             'birthday' => null,
             'gender' => null,
             'is_active' => 1,
