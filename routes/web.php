@@ -21,3 +21,5 @@ Route::post('/address', [AddressController::class, 'worker']);
 
 Route::get('/person', [PersonController::class, 'worker']);
 Route::post('/person', [PersonController::class, 'worker']);
+
+Route::get('/', fn() => redirect('/person'));
