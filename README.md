@@ -18,7 +18,7 @@ Basic Person Crud App
 
 From the command line run
 ```shell
-composer dump
+composer install
 ```
 
 ```shell
