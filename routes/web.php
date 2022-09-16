@@ -20,6 +20,6 @@ Route::post('/address', [AddressController::class, 'worker']);
 
 
 Route::get('/person', [PersonController::class, 'worker']);
-Route::post('/person', [PersonController::class, 'worker']);
+Route::post('/person', [PersonController::class, 'worker'])->name('person');
 
 Route::get('/', fn() => redirect('/person'));
