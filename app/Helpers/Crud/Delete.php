@@ -21,7 +21,7 @@ trait Delete
         } catch (\Exception $e) {
             return [
                 'success' => false,
-                'error' => $e->getMessage()
+                'error' => 'record is not deleted, integrity constraint violation'
             ];
         }
     }
