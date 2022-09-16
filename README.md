@@ -10,8 +10,9 @@
 # basicpersoncrud
 Basic Person Crud App
 
-## Features
+## Unit Test
 
+./vendor/bin/phpunit
 
 
 ## Installation and Configuration
