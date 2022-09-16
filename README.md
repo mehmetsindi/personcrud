@@ -59,7 +59,7 @@ class PersonController extends Controller
 
 ## Pickup Model and GetMethod
 
-We find the model and method with the pikup object according to the fuse and fuseAction parameters that come with the request.
+We find the model and method with the pickup object according to the fuse and fuseAction parameters that come with the request.
 
     public function pickUp()
     {
