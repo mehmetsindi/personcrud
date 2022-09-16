@@ -33,7 +33,8 @@ Route::get('/person', [PersonController::class, 'worker']);
 Route::post('/person', [PersonController::class, 'worker']);
 
 ## Controller
-controller da sadece worker metodunun kullanımı yeterli
+
+It is sufficient to use only the worker method in the controller.
 
 class PersonController extends Controller
 {
@@ -57,7 +58,8 @@ class PersonController extends Controller
 
 
 ## Pickup Model and GetMethod
-Pikup objesi ile model ve methodu, request ile gelen fuse ve fuseAction parametlerine göre buluyoruz
+
+We find the model and method with the pikup object according to the fuse and fuseAction parameters that come with the request.
 
     public function pickUp()
     {
@@ -227,20 +229,20 @@ Pikup objesi ile model ve methodu, request ile gelen fuse ve fuseAction parametl
 
 
 
-## YENİ MODÜL EKLEME
+## ADD NEW MODULE
 
 
 1- Controller
     a- ModuleController
 2- Model
     a- ModuleModel
-3- Validasayon
+3- Validation
     a-ModuleStoreValidation
     b-ModuleUpdateValidation
     ..
     ..
 
-Dosyalar ve Klasörler oluşturulmalı
+Files and Folders must be created
 
 App\Helpers\Contstants
 
@@ -261,14 +263,14 @@ App\Helpers\Contstants
     }
     
     
-fuse ve validation dosyalarını belirtin
+Specify fuse and validation files
 
 
 Route::post('/module', [ModulenController::class, 'worker']);
 
 
-rota verin
+give route
 
 
-crud hazır!
+crud ready!
 
