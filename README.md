@@ -34,6 +34,8 @@ Route::post('/person', [PersonController::class, 'worker']);
 
 ## Controller
 
+It is sufficient to use only the worker method in the controller.
+
 class PersonController extends Controller
 {
     use Picker;
@@ -57,6 +59,7 @@ class PersonController extends Controller
 
 ## Pickup Model and GetMethod
 
+We find the model and method with the pickup object according to the fuse and fuseAction parameters that come with the request.
 
     public function pickUp()
     {
@@ -223,3 +226,51 @@ class PersonController extends Controller
             ];
         }
     }
+
+
+
+## ADD NEW MODULE
+
+
+1- Controller
+    a- ModuleController
+2- Model
+    a- ModuleModel
+3- Validation
+    a-ModuleStoreValidation
+    b-ModuleUpdateValidation
+    ..
+    ..
+
+Files and Folders must be created
+
+App\Helpers\Contstants
+
+    public function fuse()
+    {
+        return [
+            'module' => '\App\Modules\Module\Models\ModuleModel'
+        ];
+    }
+    
+        public function validation()
+    {
+        return [
+            'store' => [
+                'Module' => '\App\Modules\Module\Validation\ModuleStoreValidation',
+            ],
+        ];
+    }
+    
+    
+Specify fuse and validation files
+
+
+Route::post('/module', [ModulenController::class, 'worker']);
+
+
+give route
+
+
+crud ready!
+
