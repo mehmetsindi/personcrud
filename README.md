@@ -234,18 +234,23 @@ We find the model and method with the pickup object according to the fuse and fu
 
 
 1- Controller
+
     a- ModuleController
+
 2- Model
+
     a- ModuleModel
+
 3- Validation
+
     a-ModuleStoreValidation
+
     b-ModuleUpdateValidation
-    ..
-    ..
+
 
 Files and Folders must be created
 
-App\Helpers\Contstants
+App\Helpers\Constants
 
     public function fuse()
     {

@@ -2,7 +2,7 @@
 
 namespace App\Helpers\Crud;
 
-use App\Helpers\Contstants;
+use App\Helpers\Constants;
 use Illuminate\Support\Str;
 use App\Helpers\SlugGenerator;
 use Exception;
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 trait Create
 {
-    use Contstants;
+    use Constants;
 
     public function getCreate($model)
     {

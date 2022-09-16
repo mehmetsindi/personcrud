@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-trait Contstants
+trait Constants
 {
 
     public function genderType()

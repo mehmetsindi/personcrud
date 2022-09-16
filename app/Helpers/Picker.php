@@ -11,7 +11,7 @@ use App\Helpers\Crud\Delete;
 trait Picker
 {
 
-    use Contstants, Create, Read, Update, Delete;
+    use Constants, Create, Read, Update, Delete;
 
     public function pickUp()
     {
