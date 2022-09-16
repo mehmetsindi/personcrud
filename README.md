@@ -33,6 +33,7 @@ Route::get('/person', [PersonController::class, 'worker']);
 Route::post('/person', [PersonController::class, 'worker']);
 
 ## Controller
+controller da sadece worker metodunun kullanımı yeterli
 
 class PersonController extends Controller
 {
@@ -56,7 +57,7 @@ class PersonController extends Controller
 
 
 ## Pickup Model and GetMethod
-
+Pikup objesi ile model ve methodu, request ile gelen fuse ve fuseAction parametlerine göre buluyoruz
 
     public function pickUp()
     {
@@ -223,3 +224,51 @@ class PersonController extends Controller
             ];
         }
     }
+
+
+
+## YENİ MODÜL EKLEME
+
+
+1- Controller
+    a- ModuleController
+2- Model
+    a- ModuleModel
+3- Validasayon
+    a-ModuleStoreValidation
+    b-ModuleUpdateValidation
+    ..
+    ..
+
+Dosyalar ve Klasörler oluşturulmalı
+
+App\Helpers\Contstants
+
+    public function fuse()
+    {
+        return [
+            'module' => '\App\Modules\Module\Models\ModuleModel'
+        ];
+    }
+    
+        public function validation()
+    {
+        return [
+            'store' => [
+                'Module' => '\App\Modules\Module\Validation\ModuleStoreValidation',
+            ],
+        ];
+    }
+    
+    
+fuse ve validation dosyalarını belirtin
+
+
+Route::post('/module', [ModulenController::class, 'worker']);
+
+
+rota verin
+
+
+crud hazır!
+
