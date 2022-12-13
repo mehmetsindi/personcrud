@@ -272,7 +272,7 @@ App\Helpers\Constants
 Specify fuse and validation files
 
 
-Route::post('/module', [ModulenController::class, 'worker']);
+Route::post('/module', [ModuleController::class, 'worker']);
 
 
 give route
